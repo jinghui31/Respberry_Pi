@@ -15,7 +15,8 @@ digits = {
     9: (1, 1, 1, 1, 0, 1, 0, 0),
     '.': (0, 0, 0, 0, 1, 0, 0, 0)
 }
-phones = [0, 9, 3, 3, 8, 2, 2, 2, 9, 1]
+
+phones = list(map(int,'0933822291'))
 for i in range(len(phones)):
     phones.insert((i + 1) * 2 - 1, '.')
 
