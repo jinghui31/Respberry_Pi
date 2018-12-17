@@ -19,7 +19,7 @@ digits = {
     6: (0, 1, 1, 1, 0, 1, 1, 1),
     7: (1, 1, 1, 0, 0, 1, 0, 0),
     8: (1, 1, 1, 1, 0, 1, 1, 1),
-    9: (1, 1, 1, 1, 0, 1, 0, 0),
+    9: (1, 1, 1, 1, 0, 1, 0, 0)
 }
 
 #gpio.setwarnings(False)
@@ -49,11 +49,11 @@ def Led(color):
         #led.color = (0, 0, ran)
         pass
 
-def Number(num):
-    print(num)
+def Number(data):
+    print(data)
     for index, pin in enumerate(pins):
-        #gpio.output(pin, digits[num][index])
-        print(pin, digits[num][index])
+        #gpio.output(pin, digits[data][index])
+        print(pin, digits[data][index])
 
     #gpio.cleanup()
 
@@ -92,6 +92,7 @@ def appInterface(window):
         Button(
             numFrame2, text = i, font = ('Helvetica', 20), pady = 10, command = partial(Number, i)
         ).pack(side = LEFT, fill = X, expand = True, padx = 10, pady = 10)
+
     numFrame2.pack(fill = X, padx = 10, pady = 10)
 
 if __name__ == '__main__':
