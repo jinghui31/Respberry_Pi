@@ -1,7 +1,7 @@
-from gpiozero import Button, RGBLED
 # RGBLED just use for static (red, green, blue)
-from signal import pause
+from gpiozero import Button, RGBLED
 from random import randint
+from signal import pause
 
 button = Button(18)
 led = RGBLED(red = 22, green = 27, blue = 17)
